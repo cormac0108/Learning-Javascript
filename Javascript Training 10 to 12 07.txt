@@ -1,0 +1,75 @@
+// DOM Selectors
+
+document.getElementsByTagName("h1");
+document.getElementsByClassName("second");
+document.getElementById("first");
+document.getElementsByClassName("second")[0];
+
+// query selector selects the first item that it finds
+
+document.querySelector("h1");
+
+document.querySelector("li");
+
+document.querySelectorAll("li");
+
+
+document.querySelectorAll("li, h1");
+
+// all the browsers have implemented queryselector so that is good. 
+// Make sure everything is supported. use the query selectors instead of getElement
+// you need to select an element in order to get it's attribute
+
+document.querySelector("li").getAttribute("random");
+document.querySelector("li").setAttribute("random", "1000");
+document.querySelector("li");
+
+// having the dom you can change anything in your web browser. We can change CSS styles.
+document.querySelector("h1");
+document.querySelector("h1").style;
+
+document.querySelector("h1").style.background = "yellow"; 
+
+// search code pen .io and youll find a ton of cool things people have buuilt using CSS 
+// add a new class to your h1
+
+var h1 = document.querySelector("h1");
+h1
+h1.className = "coolTitle";
+
+
+document.querySelector("li");
+document.querySelector("li").classList;
+document.querySelector("li").classList.add("coolTitle");
+
+document.querySelector("li").classList.remove("coolTitle");
+
+document.querySelector("li").classList.add("done");
+
+document.querySelector("li").classList.toggle("done");
+
+// query selectors to grab the element and change the styles using something like classlist. 
+// .innerHTML  = dangerous! be careful
+
+document.querySelector("h1");
+document.querySelector("h1").innerHTML = "<strong> !!! </strong>";
+
+parentElement
+children
+
+document.querySelectorAll("li")[1]; 
+document.querySelectorAll("li")[1].parentElement; 
+
+// this will select the unordered list beacause it is the parent Element. 
+document.querySelectorAll("li")[1].parentElement.parentElement; 
+// this will give you the body tag
+
+document.querySelectorAll("li")[1].parentElement.parentElement.children;
+// this will give you all the children of the body.
+// it is important to CACHE selectors in variables
+
+var h1 = document.querySelector("h1");
+// this is best practice
+
+
+
