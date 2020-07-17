@@ -33,7 +33,7 @@ console.log(a);
 // "this" is quite a confusing thing in JS
 
 console.log(this);
-console.log(this === winbdow);
+console.log(this === window);
 this.alert("hello");
 
 // this - means what object or enviroment are we in right now? what object it is inside of. 
@@ -96,3 +96,41 @@ const wizard2 = new Wizard("Shawn" , "Dark Magic");
 wizard1.introduce();
 wizard2.play();
 wizard1.play();
+
+
+class Player {
+    constructor(name, type) {
+        console.log('player', this);
+        this.name = name;
+        this.type = type;
+    } 
+    introduce () {
+        console.log(`Hi I am ${this.name}, I'm a ${this.type}`)
+    }
+}
+
+class Wizard101 extends Player {
+    constructor(name, type) {
+        console.log("wizard", this);
+        super(name, type)
+    }
+    play () {
+        console.log(`Weee i am a ${this.type}`)
+    }
+}
+
+// super says hey run the constructor function. put sup befor console.log ...
+
+class Wizard101 extends Player {
+    constructor(name, type) {
+        super(name, type)
+        console.log("wizard", this);
+    }
+    play () {
+        console.log(`Weee i am a ${this.type}`)
+    }
+}
+
+// you will see this synthax in react. Once we say class we are saying hey we will
+// probably want to make copies of this object, objects are quite complex but they 
+// give us alot of power so its worth it
