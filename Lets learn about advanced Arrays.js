@@ -83,9 +83,7 @@ console.log( "filter",filterArray);
 // we have a second parameter after the function where we can set the value of where we want 
 // the accumulator to start from 
 
-// const reduceArray = array.reduce((accumulator, num) => {
-//     return accumulator + num
-// } , 0);
+// const filterArray = array.filter(num => num > 5);
 
 // console.log("reduce", reduceArray);
 
