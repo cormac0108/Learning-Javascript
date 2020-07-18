@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title> Hello! </title>
+    
+  </head>
+  <body>
+    <form onsubmit="increment(); return false;">
+        <input type="submit">   
+    </form>
+    <div id="result">
+        0
+    </div>
+    <button id="Red">R</button>
+    <button id="Green">G</button>
+    <button id="Blue">B</button>
+   <!-- lets make a text size selector. selected = by default. this keyword, 
+    meaning what triggered the event -->
+    <p> THis is text</p>
+    <select>
+        <option value="large">Large Text</option>
+        <option value="initial" selected>Medium Text</option>
+        <option value="small">Small Text</option>
+    </select>
+
+
+
+
+    <script>
+        // an anonymous function. when the button is clicked on this function will run.
+        // why cant it find the red id element? remember it reads code from top to bottom. 
+        // so move all this to the bottom above the close body tag then try. same logic for others
+        // document.querySelector("#Red").onclick = function() {
+        //     document.querySelector("body").style.backgroundColor = "red";
+        // }
+        // document.querySelector("#Green").onclick = function() {
+        //     document.querySelector("body").style.backgroundColor = "green";
+        // }
+        // document.querySelector("#Blue").onclick = function() {
+        //     document.querySelector("body").style.backgroundColor = "blue";
+        // }
+
+        // let body =  document.querySelector("body");
+        // // remember DRY
+        // document.querySelector("#Red").onclick = function() {
+        //     body.style.backgroundColor = "red";
+        // }
+        // document.querySelector("#Green").onclick = function() {
+        //     body.style.backgroundColor = "green";
+        // }
+        // document.querySelector("#Blue").onclick = function() {
+        //     body.style.backgroundColor = "blue";
+        // }
+        // there are all kind of events you can listen for
+
+        // lets make something that lets us choose a font size. every option needs a value.
+        // updates the style of that paragraph to reflect that new value. updates the size of the p
+        document.querySelector("select").onchange = function () {
+            document.querySelector("p").style.fontSize = this.value;
+        }
+
+
+
+
+
+    </script>
+  </body>
+</html>
