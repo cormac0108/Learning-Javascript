@@ -85,3 +85,47 @@ color2.addEventListener("input", setGradient);
 // .textContent  -   also you can do oninput="setGradient()" attribute in HTML
 // these are different methods .texrt content can be used for css. as follows. 
 
+// add a random color generator.
+
+var randomButton = document.getElementById("Random");
+
+function getRandomColor() {
+	var letters = '0123456789ABCDEF';
+	var color = '#';
+	for (var i = 0; i < 6; i++) {
+	  color += letters[Math.floor(Math.random() * 16)];
+	}
+	return color;
+  }
+
+function randomColors(){
+	color1.value = getRandomColor();
+	color2.value = getRandomColor();
+
+	setGradient();
+}
+
+setGradient();
+
+randomButton.addEventListener("click", randomColors);
+
+// now lets do a little jquery. JQuery library, to make DOM manipulation easier. 
+
+// <script>
+//  $(document).ready(function {
+//     $("p").click(function( ) {
+//         $(this).hide();
+//     });
+// });
+// </script>
+
+// this is how jquery snippetwill appear in html. $ for select. Jquery made code 
+// very imperative which makes a mess, so not good. It got really messy....sooo....
+// in 2018 jquery isnt that useful of a skill. onstead we will learn React. React is declarative
+// no more worrying about dom manipulation techniques.Lets learn about the concept of scope
+
+// copy and paste this into your Browser, look at the Scope. (window)
+
+// function apple() {
+//     console.log("test");
+// }
