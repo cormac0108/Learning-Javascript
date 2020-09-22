@@ -51,3 +51,5 @@ function moveCommand(direction) {
 
 
 // window.moveCommand("forward");   try these in the console. remember you window object? . 
+
+// now for  ES5 and ES6  there is nothing static about being a web dev
